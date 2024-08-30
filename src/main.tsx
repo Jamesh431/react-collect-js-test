@@ -23,3 +23,19 @@ export const routeArr = [
     ],
   },
 ];
+
+const container = document.getElementById("root") as any;
+let root = container._reactRootContainer;
+
+if (!root) {
+  root = ReactDOM.createRoot(container);
+  container._reactRootContainer = root;
+}
+
+const router = createBrowserRouter(routeArr);
+
+root.render(
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
+);

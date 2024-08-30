@@ -6,7 +6,7 @@ export default function Checkout() {
       <div className="header-wrapper">
         <h1>Welcome to Checkout!</h1>
 
-        <Link to={"./"}>
+        <Link to={"../"}>
           <p>Back to home</p>
         </Link>
       </div>
