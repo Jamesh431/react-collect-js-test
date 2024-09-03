@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Cart from "../components/Cart";
 
 export default function Checkout() {
   return (
@@ -11,7 +12,9 @@ export default function Checkout() {
         </Link>
       </div>
 
-      <div className="checkout-wrapper"></div>
+      <div className="checkout-wrapper">
+        <Cart />
+      </div>
     </div>
   );
 }
