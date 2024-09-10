@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Checkout from "./routes/Checkout";
 import Home from "./routes/Home";
 import App from "./routes/App";
+import { UserProvider } from "./context/UserProvider";
 
 export const routeArr = [
   {
@@ -36,6 +37,8 @@ const router = createBrowserRouter(routeArr);
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <UserProvider>
+      <RouterProvider router={router} />
+    </UserProvider>
   </React.StrictMode>
 );
